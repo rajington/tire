@@ -94,6 +94,7 @@ module Tire
             # TODO: Actualy, allow passing all the valid options from
             # <http://www.elasticsearch.org/guide/reference/api/search/uri-request.html>
             s.fields Array(options[:fields]) if options[:fields]
+            s.highlight options[:highlight] if options[:highlight]
           end
 
           s.results
